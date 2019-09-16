@@ -2325,7 +2325,6 @@ input, select, textarea {
 	}
 
 		@media screen and (max-width: 980px) {
-
 			label {
 				font-size: 0.9rem;
 			}
@@ -4690,3 +4689,87 @@ input, select, textarea {
 		}
 
 	}
+
+	.slider {
+		display: flex;
+		position: relative;
+		overflow: hidden;
+		height: 100vh;
+		width: 100%;
+	}
+
+	.slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 0.4s ease-in-out;
+	}
+
+	.slide.current {
+		opacity: 1;
+	}
+
+	.slide .content {
+		position: absolute;
+		bottom: 70px;
+		left: -600px;
+		opacity: 0;
+		width: 600px;
+		background-color: rgba(255,255,255,.08);
+		padding: 35px;
+		color: #eeeeee;
+	}
+
+	.slide .content h1 {
+		margin-bottom: 10px;
+		color: #fff;
+	}
+
+	.slide.current .content {
+		opacity: 1;
+		transform: translateX(600px);
+		transition: all 0.7s ease-in-out 0.3s;
+	}
+
+	.buttons button#next {
+		position: absolute;
+		top:50%;
+		right: 15px;
+	}
+
+	.buttons button#prev {
+		position: absolute;
+		top:50%;
+		left: 15px;
+	}
+
+	.buttons button {
+		border: 2px solid white;
+		background-color: transparent !important;
+		color: #fff !important;
+	}
+
+	.slide:first-child {
+		background: url("../../images/cake.png") no-repeat center center/cover;
+	}
+	.slide:nth-child(2) {
+		background: url("../../images/chocolate-apples.png") no-repeat center center/cover;
+	}
+	.slide:nth-child(3) {
+		background: url("../../images/custom-apples.png") no-repeat center center/cover;
+	}
+	.slide:nth-child(4) {
+		background: url("../../images/cake.png") no-repeat center center/cover;
+	}
+	.slide:nth-child(5) {
+		background: url("../../images/cake.png") no-repeat center center/cover;
+	}
+	.slide:nth-child(6) {
+		background: url("../../images/cake.png") no-repeat center center/cover;
+	}
+
+
+
